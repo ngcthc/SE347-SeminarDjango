@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+</head>
+<body>
+    <h1>Predict Mode</h1>
+    <img src="{% url 'webcam' %}" alt="Webcam">
+    <form action="{% url 'addface' %}">
+        <input type="submit" value="Tạo khuôn mặt mới" />
+    </form>
+</body>
+</html>

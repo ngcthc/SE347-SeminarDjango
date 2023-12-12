@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'book/create.css' %}">
+</head>
+<body>
+    <h1>Add new book</h1>
+    <form action="." method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Title</td>
+                <td><input type="text" name="title"></td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td><input type="number" name="price"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Add">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

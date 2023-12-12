@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Create Mode</h1>
+    <form method="POST" action="{% url 'addface' %}">
+        {% csrf_token %}
+        <div>
+            <img src="{% url 'create' %}" alt="Create">
+        </div>
+        <div>
+            <input type="text" name="name" placeholder="Name"/>
+        </div>
+        <div>
+            <input type="submit" value="Tạo khuôn mặt" />
+        </div>
+        <!-- <table>
+            <tr>
+                <td>
+
+                </td>
+            </tr>
+            
+        </table> -->
+    </form>
+    <form action="{% url 'index' %}">
+        <input type="submit" value="Chế độ sử dụng" />
+    </form>
+</body>
+</html>
